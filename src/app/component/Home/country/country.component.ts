@@ -40,7 +40,6 @@ export class CountryComponent implements OnInit ,OnChanges {
         StorageArray.push(item.id)
       }
       this.getName.emit(res);
-      console.log(res,'getName')
     },err =>{
       this.router.navigateByUrl('/');
     })
@@ -82,14 +81,12 @@ export class CountryComponent implements OnInit ,OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
       if(this.GetEnentDelete){
-        console.log('Delete',changes)
         this.getdeleteCountry()
       }else{
          console.log('false');
       }
 
       if(this.EditEvent){
-        console.log('Edit',changes)
         this.funEditCountry()
       }else{
          console.log('false');
