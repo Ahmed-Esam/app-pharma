@@ -1,0 +1,48 @@
+<div class="contentHome">
+  <form>
+    <app-country (getName)='NameTest=$event' [countryId]="getcountryId" [GetEnentDelete]="EventDelete" [EditcountryItem]="Editcountry" [EditEvent]="passEvent"></app-country>
+  </form>
+  <div class="inputCity" *ngIf="ShowBtn" >
+    <div class="form-group">
+      <input  #city class="form-control" type="text">
+      <button (click)="AddbtnCity(city)"  type="button" class="btn btn-primary">Add City </button>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+
+      <div *ngFor="let item of NameTest" class="col-lg-4">
+        <div class="card mb-2">
+          <div class="card-body">
+
+            <h5 class="card-title titleCard">
+              {{item.name}}
+              <p>
+                <i class="bi bi-plus-circle" (click)="getAddCity(item.id)"></i>
+                <i class="bi bi-pencil-square"(click)="EditItem(item,$event)"></i>
+                <i class="bi bi-trash3" (click)="getId(item.id,$event)"></i>
+              </p>
+            </h5>
+
+            <ul class="list-unstyled">
+              <li *ngFor="let CityItem of resAllCitiesCountry" class="listCard">
+                <div *ngIf="CityItem.countryId === item.id">
+                  {{CityItem.name}}
+                  <p>
+                    <i class="bi bi-trash3" (click)="removeCity(CityItem.id)"></i>
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+

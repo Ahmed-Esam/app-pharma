@@ -1,0 +1,20 @@
+<div class="contentForm">
+  <h1 class="title">
+    login
+  </h1>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input  #Email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input  #Password type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div *ngIf="messageError" class="alert alert-danger" role="alert">
+      please check your email and password
+    </div>
+    <button (click)="getAccont(Email,Password)" type="button" class="btn btn-primary">Submit</button>
+  </form>
+</div>

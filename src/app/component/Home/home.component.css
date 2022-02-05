@@ -1,0 +1,11 @@
+.contentHome{width:100%;min-height:400px;margin:100px auto;background-color:#FFF;border:1px solid #aaa; padding:20px;display:flex;flex-direction:column;}
+.form-group{display: flex;justify-content: space-around;}
+.form-group input{width: 60%;}
+.titleCard{display: flex;justify-content: space-between;}
+.titleCard p i{margin: 0 5px;cursor: pointer;}
+.listCard > div{display: flex;justify-content: space-between;}
+.listCard >div p i{margin: 0 5px; cursor: pointer;}
+.inputCity{display: flex;justify-content: center;}
+
+
+

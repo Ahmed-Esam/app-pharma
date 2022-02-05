@@ -1,0 +1,6 @@
+
+<div class="form-group">
+  <input [value]="GlobleInput" #Name class="form-control" type="text">
+  <button *ngIf="!ShowBtn" (click)="getAddCountry(Name)"  type="button" class="btn btn-primary">Add Country</button>
+  <button *ngIf="ShowBtn"  (click)="funUpdateCountry(Name)" type="button" class="btn btn-info">Edit Country</button>
+</div>
